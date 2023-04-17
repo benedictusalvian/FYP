@@ -17,6 +17,15 @@ export function SiteFooter() {
             >
               shadcn
             </a>
+            . Modified by{" "}
+            <a
+              href={siteConfig.links.bengithub}
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              Ben
+            </a>
             . Hosted on{" "}
             <a
               href="https://vercel.com"

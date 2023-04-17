@@ -62,7 +62,7 @@ export default async function BlogPage() {
           ))}
         </div>
       ) : (
-        <p>No posts published.</p>
+        <p>No journals published.</p>
       )}
     </div>
   )

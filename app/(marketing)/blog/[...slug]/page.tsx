@@ -98,7 +98,7 @@ export default async function PostPage({ params }: PostPageProps) {
         className="absolute top-14 left-[-200px] hidden items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900 xl:inline-flex"
       >
         <Icons.chevronLeft className="mr-2 h-4 w-4" />
-        See all posts
+        See all journals
       </Link>
       <div>
         {post.date && (
@@ -155,7 +155,7 @@ export default async function PostPage({ params }: PostPageProps) {
           className="inline-flex items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900"
         >
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
-          See all posts
+          See all journals
         </Link>
       </div>
     </article>

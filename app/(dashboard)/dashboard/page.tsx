@@ -45,7 +45,7 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell>
-      <DashboardHeader heading="Posts" text="Create and manage posts.">
+      <DashboardHeader heading="Journals" text="Create and manage journals.">
         <PostCreateButton />
       </DashboardHeader>
       <div>
@@ -58,9 +58,9 @@ export default async function DashboardPage() {
         ) : (
           <EmptyPlaceholder>
             <EmptyPlaceholder.Icon name="post" />
-            <EmptyPlaceholder.Title>No posts created</EmptyPlaceholder.Title>
+            <EmptyPlaceholder.Title>No journals created</EmptyPlaceholder.Title>
             <EmptyPlaceholder.Description>
-              You don&apos;t have any posts yet. Start creating content.
+              You don&apos;t have any journals yet. Start creating content.
             </EmptyPlaceholder.Description>
             <PostCreateButton
               className={cn(
