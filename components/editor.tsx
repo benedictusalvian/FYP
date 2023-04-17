@@ -30,7 +30,7 @@ export function Editor({ post }: EditorProps) {
   const router = useRouter()
   const [isSaving, setIsSaving] = React.useState<boolean>(false)
   const [isMounted, setIsMounted] = React.useState<boolean>(false)
-  const [prompt, setPrompt] = React.useState("")
+  // const [prompt, setPrompt] = React.useState("")
 
   const initializeEditor = React.useCallback(async () => {
     const EditorJS = (await import("@editorjs/editorjs")).default
@@ -116,44 +116,44 @@ export function Editor({ post }: EditorProps) {
     })
   }
 
-  const submitPrompt = async () => {
+  // const submitPrompt = async () => {
 
-    // Get data from the form.
-    const data = {
-      "prompt": prompt,
-      "num_samples": 1,
-      "num_top_matches": 1,
-      "duration": 30
-    }
+  //   // Get data from the form.
+  //   const data = {
+  //     "prompt": prompt,
+  //     "num_samples": 1,
+  //     "num_top_matches": 1,
+  //     "duration": 30
+  //   }
 
-    // Send the data to the server in JSON format.
-    const JSONdata = JSON.stringify(data)
+  //   // Send the data to the server in JSON format.
+  //   const JSONdata = JSON.stringify(data)
 
-    // API endpoint where we send form data.
-    const endpoint = 'http://d-app-clgjbq5mt003o2y2ngkxhwkge-947411825.us-east-1.elb.amazonaws.com'
+  //   // API endpoint where we send form data.
+  //   const endpoint = 'http://d-app-clgjbq5mt003o2y2ngkxhwkge-947411825.us-east-1.elb.amazonaws.com'
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: 'POST',
-      // Tell the server we're sending JSON.
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    }
+  //   // Form the request for sending data to the server.
+  //   const options = {
+  //     // The method is POST because we are sending data.
+  //     method: 'POST',
+  //     // Tell the server we're sending JSON.
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     // Body of the request is the JSON data we created above.
+  //     body: JSONdata,
+  //   }
 
-    // Send the form data to our forms API on Vercel and get a response.
-    const response = await fetch(endpoint, options)
+  //   // Send the form data to our forms API on Vercel and get a response.
+  //   const response = await fetch(endpoint, options)
 
-    // Get the response data from server as JSON.
-    // If server returns the name submitted, that means the form works.
-    const result = await response.json()
-    console.log(result.data)
+  //   // Get the response data from server as JSON.
+  //   // If server returns the name submitted, that means the form works.
+  //   const result = await response.json()
+  //   console.log(result.data)
 
 
-  }
+  // }
 
   if (!isMounted) {
     return null
@@ -195,9 +195,9 @@ export function Editor({ post }: EditorProps) {
             {...register("title")}
           />
           <div id="editor" className="min-h-[500px]" />
-            <label htmlFor="prompt">Prompt to generate:</label>
+            {/* <label htmlFor="prompt">Prompt to generate:</label>
             <input type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)}/>
-            <button onSubmit={submitPrompt}>Submit</button>
+            <button onSubmit={submitPrompt}>Submit</button> */}
           <p className="text-sm text-gray-500">
             Use{" "}
             <kbd className="rounded-md border bg-slate-50 px-1 text-xs uppercase">
